@@ -1,0 +1,6 @@
+
+export helppath=/home/yiannis/Desktop/Website/cheat_sheets
+
+if["$1" = "3"] then
+    cat $helppath/clibs.txt
+fi

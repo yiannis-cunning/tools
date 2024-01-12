@@ -1,0 +1,29 @@
+
+
+
+
+
+- There are five parts to assembly instruction
+    1) PREFIX 
+        - 0 to 4? bytes
+        - can tell about op-sizes in displacement/immediate
+        - can override operand sizes
+        - can decalred other things about instructions you can tack on -> atomic, repeat...
+    2) Opcode
+        - 1 to 3 bytes
+        - tells if Modrsm is there
+        - tells if SIB is there
+        - tells if Immediate is there
+    3) Modrsm
+        - 0 to 1 bytes
+    4) SIB
+        - 0 to 1 bytes
+    5) Displacement
+        - 0 to 4 bytes
+    6) Immediate
+        - 0 to 4 bytes
+
+
+# build
+ - 
+

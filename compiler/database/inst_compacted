@@ -1,0 +1,330 @@
+AAA;ASCII Adjust after Addition;;00110111
+AAD;ASCII Adjust AX before Division;;11010101:00001010
+AAM;ASCII Adjust AX after Multiply;;11010100:00001010
+AAS;ASCII Adjust AL after Subtraction;;00111111
+ADC;ADD with Carry;register1 to register2;0001000w:11reg1reg2
+ADC;ADD with Carry;register2 to register1;0001001w:11reg1reg2
+ADC;ADD with Carry;memory to register;0001001w:modregr/m
+ADC;ADD with Carry;register to memory;0001000w:modregr/m
+ADC;ADD with Carry;immediate to register;100000sw:11010reg:immediatedata
+ADC;ADD with Carry;immediate to AL, AX, or EAX;0001010w:immediatedata
+ADC;ADD with Carry;immediate to memory;100000sw:mod010r/m:immediatedata
+ADD;Add;register1 to register2;0000000w:11reg1reg2
+ADD;Add;register2 to register1;0000001w:11reg1reg2
+ADD;Add;memory to register;0000001w:modregr/m
+ADD;Add;register to memory;0000000w:modregr/m
+ADD;Add;immediate to register;100000sw:11000reg:immediatedata
+ADD;Add;immediate to AL, AX, or EAX;0000010w:immediatedata
+ADD;Add;immediate to memory;100000sw:mod000r/m:immediatedata
+AND;Logical AND;register1 to register2;0010000w:11reg1reg2
+AND;Logical AND;register2 to register1;0010001w:11reg1reg2
+AND;Logical AND;memory to register;0010001w:modregr/m
+AND;Logical AND;register to memory;0010000w:modregr/m
+AND;Logical AND;immediate to register;100000sw:11100reg:immediatedata
+AND;Logical AND;immediate to AL, AX, or EAX;0010010w:immediatedata
+AND;Logical AND;immediate to memory;100000sw:mod100r/m:immediatedata
+ARPL;Adjust RPL Field of Selector;from register;01100011:11reg1reg2
+ARPL;Adjust RPL Field of Selector;from memory;01100011:modregr/m
+BOUND;Check Array Against Bounds;;01100010:modAregr/m
+BSF;Bit Scan Forward;register1, register2;00001111:10111100:11reg1reg2
+BSF;Bit Scan Forward;memory, register;00001111:10111100:modregr/m
+BSR;Bit Scan Reverse;register1, register2;00001111:10111101:11reg1reg2
+BSR;Bit Scan Reverse;memory, register;00001111:10111101:modregr/m
+BSWAP;Byte Swap;;00001111:11001reg
+BT;Bit Test;register, immediate;00001111:10111010:11100reg:imm8data
+BT;Bit Test;memory, immediate;00001111:10111010:mod100r/m:imm8data
+BT;Bit Test;register1, register2;00001111:10100011:11reg2reg1
+BT;Bit Test;memory, reg;00001111:10100011:modregr/m
+BTC;Bit Test and Complement;register, immediate;00001111:10111010:11111reg:imm8data
+BTC;Bit Test and Complement;memory, immediate;00001111:10111010:mod111r/m:imm8data
+BTC;Bit Test and Complement;register1, register2;00001111:10111011:11reg2reg1
+BTC;Bit Test and Complement;memory, reg;00001111:10111011:modregr/m
+BTR;Bit Test and Reset;register, immediate;00001111:10111010:11110reg:imm8data
+BTR;Bit Test and Reset;memory, immediate;00001111:10111010:mod110r/m:imm8data
+BTR;Bit Test and Reset;register1, register2;00001111:10110011:11reg2reg1
+BTR;Bit Test and Reset;memory, reg;00001111:10110011:modregr/m
+BTS;Bit Test and Set;register, immediate;00001111:10111010:11101reg:imm8data
+BTS;Bit Test and Set;memory, immediate;00001111:10111010:mod101r/m:imm8data
+BTS;Bit Test and Set;register1, register2;00001111:10101011:11reg2reg1
+BTS;Bit Test and Set;memory, reg;00001111:10101011:modregr/m
+CALL;Call Procedure (in same segment);direct;11101000:fulldisplacement
+CALL;Call Procedure (in same segment);register indirect;11111111:11010reg
+CALL;Call Procedure (in same segment);memory indirect;11111111:mod010r/m
+CALL;Call Procedure (in other segment);direct;10011010:unsignedfulloffset,selector
+CALL;Call Procedure (in other segment);indirect;11111111:mod011r/m
+CBW;Convert Byte to Word;;10011000
+CDQ;Convert Doubleword to Qword;;10011001
+CLC;Clear Carry Flag;;11111000
+CLD;Clear Direction Flag;;11111100
+CLI;Clear Interrupt Flag;;11111010
+CLTS;Clear Task-Switched Flag in CR0;;00001111:00000110
+CMC;Complement Carry Flag;;11110101
+CMP;Compare Two Operands;register1 with register2;0011100w:11reg1reg2
+CMP;Compare Two Operands;register2 with register1;0011101w:11reg1reg2
+CMP;Compare Two Operands;memory with register;0011100w:modregr/m
+CMP;Compare Two Operands;register with memory;0011101w:modregr/m
+CMP;Compare Two Operands;immediate with register;100000sw:11111reg:immediatedata
+CMP;Compare Two Operands;immediate with AL, AX, or EAX;0011110w:immediatedata
+CMP;Compare Two Operands;immediate with memory;100000sw:mod111r/m:immediatedata
+CMPS;CMPSB/CMPSW/CMPSD - Compare String Operands;;1010011w
+CMPXCHG;Compare and Exchange;register1, register2;00001111:1011000w:11reg2reg1
+CMPXCHG;Compare and Exchange;memory, register;00001111:1011000w:modregr/m
+CPUID;CPU Identification;;00001111:10100010
+CWD;Convert Word to Doubleword;;10011001
+CWDE;Convert Word to Doubleword;;10011000
+DAA;Decimal Adjust AL after Addition;;00100111
+DAS;Decimal Adjust AL after Subtraction;;00101111
+DEC;Decrement by 1;register;1111111w:11001reg
+DEC;Decrement by 1;register (alternate encoding);01001reg
+DEC;Decrement by 1;memory;1111111w:mod001r/m
+DIV;Unsigned Divide;AL, AX, or EAX by register;1111011w:11110reg
+DIV;Unsigned Divide;AL, AX, or EAX by memory;1111011w:mod110r/m
+HLT;Halt;;11110100
+IDIV;Signed Divide;AL, AX, or EAX by register;1111011w:11111reg
+IDIV;Signed Divide;AL, AX, or EAX by memory;1111011w:mod111r/m
+IMUL;Signed Multiply;AL, AX, or EAX with register;1111011w:11101reg
+IMUL;Signed Multiply;AL, AX, or EAX with memory;1111011w:mod101reg
+IMUL;Signed Multiply;register1 with register2;00001111:10101111:11:reg1reg2
+IMUL;Signed Multiply;register with memory;00001111:10101111:modregr/m
+IMUL;Signed Multiply;register1 with immediate to register2;011010s1:11reg1reg2:immediatedata
+IMUL;Signed Multiply;memory with immediate to register;011010s1:modregr/m:immediatedata
+IN;Input From Port;fixed port;1110010w:portnumber
+IN;Input From Port;variable port;1110110w
+INC;Increment by 1;reg;1111111w:11000reg
+INC;Increment by 1;reg (alternate encoding);01000reg
+INC;Increment by 1;memory;1111111w:mod000r/m
+INS;Input from DX Port;;0110110w
+INT n;Interrupt Type n;;11001101:type
+INT;Single-Step Interrupt 3;;11001100
+INTO;Interrupt 4 on Overflow;;11001110
+INVD;Invalidate Cache;;00001111:00001000
+INVLPG;Invalidate TLB Entry;;00001111:00000001:mod111r/m
+INVPCID;Invalidate Process-Context Identifier;;01100110:00001111:00111000:10000010:modregr/m
+IRET;IRETD - Interrupt Return;;11001111
+Jcc;Jump if Condition is Met;8-bit displacement;0111tttn:8-bitdisplacement
+Jcc;Jump if Condition is Met;full displacement;00001111:1000tttn:fulldisplacement
+JCXZ;JECXZ - Jump on CX/ECX Zero;Address-size prefix differentiates JCXZ and JECXZ;11100011:8-bitdisplacement
+JMP;Unconditional Jump (to same segment);short;11101011:8-bitdisplacement
+JMP;Unconditional Jump (to same segment);direct;11101001:fulldisplacement
+JMP;Unconditional Jump (to same segment);register indirect;11111111:11100reg
+JMP;Unconditional Jump (to same segment);memory indirect;11111111:mod100r/m
+JMP;Unconditional Jump (to other segment);direct intersegment;11101010:unsignedfulloffset,selector
+JMP;Unconditional Jump (to other segment);indirect intersegment;11111111:mod101r/m
+LAHF;Load Flags into AHRegister;;10011111
+LAR;Load Access Rights Byte;from register;00001111:00000010:11reg1reg2
+LAR;Load Access Rights Byte;from memory;00001111:00000010:modregr/m
+LDS;Load Pointer to DS;;11000101:modA,Bregr/m
+LEA;Load Effective Address;;10001101:modAregr/m
+LEAVE;High Level Procedure Exit;;11001001
+LES;Load Pointer to ES;;11000100:modA,Bregr/m
+LFS;Load Pointer to FS;;00001111:10110100:modAregr/m
+LGDT;Load Global Descriptor Table Register;;00001111:00000001:modA010r/m
+LGS;Load Pointer to GS;;00001111:10110101:modAregr/m
+LIDT;Load Interrupt Descriptor Table Register;;00001111:00000001:modA011r/m
+LLDT;Load Local Descriptor Table Register;LDTR from register;00001111:00000000:11010reg
+LLDT;Load Local Descriptor Table Register;LDTR from memory;00001111:00000000:mod010r/m
+LMSW;Load Machine Status Word;from register;00001111:00000001:11110reg
+LMSW;Load Machine Status Word;from memory;00001111:00000001:mod110r/m
+LOCK;Assert LOCK# Signal Prefix;;11110000
+LODS;LODSB/LODSW/LODSD - Load String Operand;;1010110w
+LOOP;Loop Count;;11100010:8-bitdisplacement
+LOOPZ;LOOPE - Loop Count while Zero/Equal;;11100001:8-bitdisplacement
+LOOPNZ;LOOPNE - Loop Count while not Zero/Equal;;11100000:8-bitdisplacement
+LSL;Load Segment Limit;from register;00001111:00000011:11reg1reg2
+LSL;Load Segment Limit;from memory;00001111:00000011:modregr/m
+LSS;Load Pointer to SS;;00001111:10110010:modAregr/m
+LTR;Load Task Register;from register;00001111:00000000:11011reg
+LTR;Load Task Register;from memory;00001111:00000000:mod011r/m
+MOV;Move Data;register1 to register2;1000100w:11reg1reg2
+MOV;Move Data;register2 to register1;1000101w:11reg1reg2
+MOV;Move Data;memory to reg;1000101w:modregr/m
+MOV;Move Data;reg to memory;1000100w:modregr/m
+MOV;Move Data;immediate to register;1100011w:11000reg:immediatedata
+MOV;Move Data;immediate to register (alternate encoding);1011wreg:immediatedata
+MOV;Move Data;immediate to memory;1100011w:mod000r/m:immediatedata
+MOV;Move Data;memory to AL, AX, or EAX;1010000w:fulldisplacement
+MOV;Move Data;AL, AX, or EAX to memory;1010001w:fulldisplacement
+MOV;Move to/from Control Registers;CR0 from register;00001111:00100010:--000reg
+MOV;Move to/from Control Registers;CR2 from register;00001111:00100010:--010reg
+MOV;Move to/from Control Registers;CR3 from register;00001111:00100010:--011reg
+MOV;Move to/from Control Registers;CR4 from register;00001111:00100010:--100reg
+MOV;Move to/from Control Registers;register from CR0-CR4;00001111:00100000:--eeereg
+MOV;Move to/from Debug Registers;DR0-DR3 from register;00001111:00100011:--eeereg
+MOV;Move to/from Debug Registers;DR4-DR5 from register;00001111:00100011:--eeereg
+MOV;Move to/from Debug Registers;DR6-DR7 from register;00001111:00100011:--eeereg
+MOV;Move to/from Debug Registers;register from DR6-DR7;00001111:00100001:--eeereg
+MOV;Move to/from Debug Registers;register from DR4-DR5;00001111:00100001:--eeereg
+MOV;Move to/from Debug Registers;register from DR0-DR3;00001111:00100001:--eeereg
+MOV;Move to/from Segment Registers;register to segment register;10001110:11sreg3reg
+MOV;Move to/from Segment Registers;register to SS;10001110:11sreg3reg
+MOV;Move to/from Segment Registers;memory to segment reg;10001110:modsreg3r/m
+MOV;Move to/from Segment Registers;memory to SS;10001110:modsreg3r/m
+MOV;Move to/from Segment Registers;segment register to register;10001100:11sreg3reg
+MOV;Move to/from Segment Registers;segment register to memory;10001100:modsreg3r/m
+MOVBE;Move data after swapping bytes;memory to register;00001111:00111000:11110000:modregr/m
+MOVBE;Move data after swapping bytes;register to memory;00001111:00111000:11110001:modregr/m
+MOVS;MOVSB/MOVSW/MOVSD - Move Data from String to String;;1010010w
+MOVSX;Move with Sign-Extend;memory to reg;00001111:1011111w:modregr/m
+MOVZX;Move with Zero-Extend;register2 to register1;00001111:1011011w:11reg1reg2
+MOVZX;Move with Zero-Extend;memory to register;00001111:1011011w:modregr/m
+MUL;Unsigned Multiply;AL, AX, or EAX with register;1111011w:11100reg
+MUL;Unsigned Multiply;AL, AX, or EAX with memory;1111011w:mod100r/m
+NEG;Two's Complement Negation;register;1111011w:11011reg
+NEG;Two's Complement Negation;memory;1111011w:mod011r/m
+NOP;No Operation;;10010000
+NOP;Multi-byte No Operation1;register;0000111100011111:11000reg
+NOP;Multi-byte No Operation1;memory;0000111100011111:mod000r/m
+NOT;One's Complement Negation;register;1111011w:11010reg
+NOT;One's Complement Negation;memory;1111011w:mod010r/m
+OR;Logical Inclusive OR;register1 to register2;0000100w:11reg1reg2
+OR;Logical Inclusive OR;register2 to register1;0000101w:11reg1reg2
+OR;Logical Inclusive OR;memory to register;0000101w:modregr/m
+OR;Logical Inclusive OR;register to memory;0000100w:modregr/m
+OR;Logical Inclusive OR;immediate to register;100000sw:11001reg:immediatedata
+OR;Logical Inclusive OR;immediate to AL, AX, or EAX;0000110w:immediatedata
+OR;Logical Inclusive OR;immediate to memory;100000sw:mod001r/m:immediatedata
+OUT;Output to Port;fixed port;1110011w:portnumber
+OUT;Output to Port;variable port;1110111w
+OUTS;Output to DX Port;;0110111w
+POP;Pop a Word from the Stack;register;10001111:11000reg
+POP;Pop a Word from the Stack;register (alternate encoding);01011reg
+POP;Pop a Word from the Stack;memory;10001111:mod000r/m
+POP;Pop a Segment Register from the Stack (Note: CS cannot be sreg2 in this usage.);segment register DS, ES;000sreg2111
+POP;Pop a Segment Register from the Stack (Note: CS cannot be sreg2 in this usage.);segment register SS;000sreg2111
+POP;Pop a Segment Register from the Stack (Note: CS cannot be sreg2 in this usage.);segment register FS, GS;00001111:10sreg3001
+POPA;POPAD - Pop All General Registers;;01100001
+POPF;POPFD - Pop Stack into FLAGS or EFLAGS Register;;10011101
+PUSH;Push Operand onto the Stack;register;11111111:11110reg
+PUSH;Push Operand onto the Stack;register (alternate encoding);01010reg
+PUSH;Push Operand onto the Stack;memory;11111111:mod110r/m
+PUSH;Push Operand onto the Stack;immediate;011010s0:immediatedata
+PUSH;Push Segment Register onto the Stack;segment register CS,DS,ES,SS;000sreg2110
+PUSH;Push Segment Register onto the Stack;segment register FS,GS;00001111:10sreg3000
+PUSHA;PUSHAD - Push All General Registers;;01100000
+PUSHF;PUSHFD - Push Flags Register onto the Stack;;10011100
+RCL;Rotate thru Carry Left;register by 1;1101000w:11010reg
+RCL;Rotate thru Carry Left;memory by 1;1101000w:mod010r/m
+RCL;Rotate thru Carry Left;register by CL;1101001w:11010reg
+RCL;Rotate thru Carry Left;memory by CL;1101001w:mod010r/m
+RCL;Rotate thru Carry Left;register by immediate count;1100000w:11010reg:imm8data
+RCL;Rotate thru Carry Left;memory by immediate count;1100000w:mod010r/m:imm8data
+RCR;Rotate thru Carry Right;register by 1;1101000w:11011reg
+RCR;Rotate thru Carry Right;memory by 1;1101000w:mod011r/m
+RCR;Rotate thru Carry Right;register by CL;1101001w:11011reg
+RCR;Rotate thru Carry Right;memory by CL;1101001w:mod011r/m
+RCR;Rotate thru Carry Right;register by immediate count;1100000w:11011reg:imm8data
+RCR;Rotate thru Carry Right;memory by immediate count;1100000w:mod011r/m:imm8data
+RDMSR;Read from Model-Specific Register;;00001111:00110010
+RDPMC;Read Performance Monitoring Counters;;00001111:00110011
+RDTSC;Read Time-Stamp Counter;;00001111:00110001
+RDTSCP;Read Time-Stamp Counter and Processor ID;;00001111:00000001:11111001
+REP INS;Input String;;11110011:0110110w
+REP LODS;Load String;;11110011:1010110w
+REP MOVS;Move String;;11110011:1010010w
+REP OUTS;Output String;;11110011:0110111w
+REP STOS;Store String;;11110011:1010101w
+REPE CMPS;Compare String;;11110011:1010011w
+REPE SCAS;Scan String;;11110011:1010111w
+REPNE CMPS;Compare String;;11110010:1010011w
+REPNE SCAS;Scan String;;11110010:1010111w
+RET;Return from Procedure (to same segment);no argument;11000011
+RET;Return from Procedure (to same segment);adding immediate to SP;11000010:16-bitdisplacement
+RET;Return from Procedure (to other segment);intersegment;11001011
+RET;Return from Procedure (to other segment);adding immediate to SP;11001010:16-bitdisplacement
+ROL;Rotate Left;register by 1;1101000w:11000reg
+ROL;Rotate Left;memory by 1;1101000w:mod000r/m
+ROL;Rotate Left;register by CL;1101001w:11000reg
+ROL;Rotate Left;memory by CL;1101001w:mod000r/m
+ROL;Rotate Left;register by immediate count;1100000w:11000reg:imm8data
+ROL;Rotate Left;memory by immediate count;1100000w:mod000r/m:imm8data
+ROR;Rotate Right;register by 1;1101000w:11001reg
+ROR;Rotate Right;memory by 1;1101000w:mod001r/m
+ROR;Rotate Right;register by CL;1101001w:11001reg
+ROR;Rotate Right;memory by CL;1101001w:mod001r/m
+ROR;Rotate Right;register by immediate count;1100000w:11001reg:imm8data
+ROR;Rotate Right;memory by immediate count;1100000w:mod001r/m:imm8data
+RSM;Resume from System Management Mode;;00001111:10101010
+SAHF;Store AH into Flags;;10011110
+SAR;Shift Arithmetic Right;register by 1;1101000w:11111reg
+SAR;Shift Arithmetic Right;memory by 1;1101000w:mod111r/m
+SAR;Shift Arithmetic Right;register by CL;1101001w:11111reg
+SAR;Shift Arithmetic Right;memory by CL;1101001w:mod111r/m
+SAR;Shift Arithmetic Right;register by immediate count;1100000w:11111reg:imm8data
+SAR;Shift Arithmetic Right;memory by immediate count;1100000w:mod111r/m:imm8data
+SBB;Integer Subtraction with Borrow;register1 to register2;0001100w:11reg1reg2
+SBB;Integer Subtraction with Borrow;register2 to register1;0001101w:11reg1reg2
+SBB;Integer Subtraction with Borrow;memory to register;0001101w:modregr/m
+SBB;Integer Subtraction with Borrow;register to memory;0001100w:modregr/m
+SBB;Integer Subtraction with Borrow;immediate to register;100000sw:11011reg:immediatedata
+SBB;Integer Subtraction with Borrow;immediate to AL, AX, or EAX;0001110w:immediatedata
+SBB;Integer Subtraction with Borrow;immediate to memory;100000sw:mod011r/m:immediatedata
+SCAS;SCASB/SCASW/SCASD - Scan String;;1010111w
+SETcc;Byte Set on Condition;register;00001111:1001tttn:11000reg
+SETcc;Byte Set on Condition;memory;00001111:1001tttn:mod000r/m
+SGDT;Store Global Descriptor Table Register;;00001111:00000001:modA000r/m
+SHL;Shift Left;register by 1;1101000w:11100reg
+SHL;Shift Left;memory by 1;1101000w:mod100r/m
+SHL;Shift Left;register by CL;1101001w:11100reg
+SHL;Shift Left;memory by CL;1101001w:mod100r/m
+SHL;Shift Left;register by immediate count;1100000w:11100reg:imm8data
+SHL;Shift Left;memory by immediate count;1100000w:mod100r/m:imm8data
+SHLD;Double Precision Shift Left;register by immediate count;00001111:10100100:11reg2reg1:imm8data
+SHLD;Double Precision Shift Left;memory by immediate count;00001111:10100100:modregr/m:imm8data
+SHLD;Double Precision Shift Left;register by CL;00001111:10100101:11reg2reg1
+SHLD;Double Precision Shift Left;memory by CL;00001111:10100101:modregr/m
+SHR;Shift Right;register by 1;1101000w:11101reg
+SHR;Shift Right;memory by 1;1101000w:mod101r/m
+SHR;Shift Right;register by CL;1101001w:11101reg
+SHR;Shift Right;memory by CL;1101001w:mod101r/m
+SHR;Shift Right;register by immediate count;1100000w:11101reg:imm8data
+SHR;Shift Right;memory by immediate count;1100000w:mod101r/m:imm8data
+SHRD;Double Precision Shift Right;register by immediate count;00001111:10101100:11reg2reg1:imm8data
+SHRD;Double Precision Shift Right;memory by immediate count;00001111:10101100:modregr/m:imm8data
+SHRD;Double Precision Shift Right;register by CL;00001111:10101101:11reg2reg1
+SHRD;Double Precision Shift Right;memory by CL;00001111:10101101:modregr/m
+SIDT;Store Interrupt Descriptor Table Register;;00001111:00000001:modA001r/m
+SLDT;Store Local Descriptor Table Register;to register;00001111:00000000:11000reg
+SLDT;Store Local Descriptor Table Register;to memory;00001111:00000000:mod000r/m
+SMSW;Store Machine Status Word;to register;00001111:00000001:11100reg
+SMSW;Store Machine Status Word;to memory;00001111:00000001:mod100r/m
+STC;Set Carry Flag;;11111001
+STD;Set Direction Flag;;11111101
+STI;Set Interrupt Flag;;11111011
+STOS;STOSB/STOSW/STOSD - Store String Data;;1010101w
+STR;Store Task Register;to register;00001111:00000000:11001reg
+STR;Store Task Register;to memory;00001111:00000000:mod001r/m
+SUB;Integer Subtraction;register1 to register2;0010100w:11reg1reg2
+SUB;Integer Subtraction;register2 to register1;0010101w:11reg1reg2
+SUB;Integer Subtraction;memory to register;0010101w:modregr/m
+SUB;Integer Subtraction;register to memory;0010100w:modregr/m
+SUB;Integer Subtraction;immediate to register;100000sw:11101reg:immediatedata
+SUB;Integer Subtraction;immediate to AL, AX, or EAX;0010110w:immediatedata
+SUB;Integer Subtraction;immediate to memory;100000sw:mod101r/m:immediatedata
+TEST;Logical Compare;register1 and register2;1000010w:11reg1reg2
+TEST;Logical Compare;memory and register;1000010w:modregr/m
+TEST;Logical Compare;immediate and register;1111011w:11000reg:immediatedata
+TEST;Logical Compare;immediate and AL, AX, or EAX;1010100w:immediatedata
+TEST;Logical Compare;immediate and memory;1111011w:mod000r/m:immediatedata
+UD0;Undefined instruction;;00001111:11111111
+UD1;Undefined instruction;;00001111:00001011
+UD2;Undefined instruction;;0000FFFF:00001011
+VERR;Verify a Segment for Reading;register;00001111:00000000:11100reg
+VERR;Verify a Segment for Reading;memory;00001111:00000000:mod100r/m
+VERW;Verify a Segment for Writing;register;00001111:00000000:11101reg
+VERW;Verify a Segment for Writing;memory;00001111:00000000:mod101r/m
+WAIT;Wait;;10011011
+WBINVD;Writeback and Invalidate Data Cache;;00001111:00001001
+WRMSR;Write to Model-Specific Register;;00001111:00110000
+XADD;Exchange and Add;register1, register2;00001111:1100000w:11reg2reg1
+XADD;Exchange and Add;memory, reg;00001111:1100000w:modregr/m
+XCHG;Exchange Register/Memory with Register;register1 with register2;1000011w:11reg1reg2
+XCHG;Exchange Register/Memory with Register;AX or EAX with reg;10010reg
+XCHG;Exchange Register/Memory with Register;memory with reg;1000011w:modregr/m
+XLAT;XLATB - Table Look-up Translation;;11010111
+XOR;Logical Exclusive OR;register1 to register2;0011000w:11reg1reg2
+XOR;Logical Exclusive OR;register2 to register1;0011001w:11reg1reg2
+XOR;Logical Exclusive OR;memory to register;0011001w:modregr/m
+XOR;Logical Exclusive OR;register to memory;0011000w:modregr/m
+XOR;Logical Exclusive OR;immediate to register;100000sw:11110reg:immediatedata
+XOR;Logical Exclusive OR;immediate to AL, AX, or EAX;0011010w:immediatedata
+XOR;Logical Exclusive OR;immediate to memory;100000sw:mod110r/m:immediateda};
